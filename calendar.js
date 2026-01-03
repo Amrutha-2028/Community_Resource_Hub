@@ -4,14 +4,14 @@ const calendarGrid = document.getElementById("calendar-grid");
 let currentDate = new Date();
 const events = [
     // HOLIDAYS (block repeating events)
-    { year: 2025, month: 11, day: 24, title: "Christmas Eve", category: "holiday", details: "Prepare your presents!", block: true },
-    { year: 2025, month: 11, day: 25, title: "Christmas", category: "holiday", details: "Enjoy with family!", block: true },
-    { year: 2025, month: 11, day: 31, title: "New Year's Eve", category: "holiday", details: "Say goodbye to 2025!", block: true },
-    { year: 2026, month: 0, day: 1, title: "New Year's Day", category: "holiday", details: "Welcome 2026!", block: true },
+    { year: 2025, month: 11, day: 24, title: "Christmas Eve", time: "All Day", location: "With the ones you love!", category: "holiday", details: "Prepare your presents!", block: true },
+    { year: 2025, month: 11, day: 25, title: "Christmas", time: "All Day", location: "With the ones you love!", category: "holiday", details: "Enjoy with family!", block: true },
+    { year: 2025, month: 11, day: 31, title: "New Year's Eve", time: "All Day", location: "With the ones you love!", category: "holiday", details: "Say goodbye to 2025!", block: true },
+    { year: 2026, month: 0, day: 1, title: "New Year's Day", time: "All Day", location: "With the ones you love!", category: "holiday", details: "Welcome 2026!", block: true },
 
     // WEEKLY EVENTS
     { repeat: "weekly", weekday: 3, time: "10:00 AM - 11:00 AM", location: "Blossoms Library", title: "Story Time", image: "https://www.rockspringslibrary.com/sites/www.rockspringslibrary.com/files/images/events/1.31.18.jpg", category: "read", details: "A fun weekly story time for toddlers with singing and dancing" },
-    { repeat: "weekly", weekday: 3, time: "11:00 AM - 4:00 PM", location: "Blossoms Park", title: "Food Drive", image: "https://foodshare.com/wp-content/uploads/2024/01/food-drives-3.jpg",category: "food-drive", details: "Pack food trays for ones in need all day" },
+    { repeat: "weekly", weekday: 3, time: "11:00 AM - 4:00 PM", location: "Blossoms Park", title: "Food Drive", image: "https://foodshare.com/wp-content/uploads/2024/01/food-drives-3.jpg", category: "food-drive", details: "Pack food trays for ones in need all day" },
     { repeat: "weekly", weekday: 1, time: "2:00 PM - 4:00 PM", location: "Blossoms City Hall", title: "Community Meeting", image: "https://www.cityofgreen.org/ImageRepository/Document?documentID=366", category: "meeting", details: "Planning meeting at 5PM for the upcoming festivals and events" },
     { repeat: "weekly", weekday: 6, time: "2:00 AM - 4:00 PM", location: "Blossoms City Hall", title: "Environmental Board Meeting", image: "https://www.cityofgreen.org/ImageRepository/Document?documentID=366", category: "meeting", details: "City hall at 3PM to discuss cleanups and making the community a better place" },
 
@@ -41,7 +41,6 @@ function getEventsForDay(year, month, day, weekday) {
         ev.year === year && ev.month === month && ev.day === day
     );
 
-    // If any one-time event blocks repeating events → ONLY show those
     if (oneTime.some(ev => ev.block)) {
         return oneTime;
     }
@@ -51,7 +50,6 @@ function getEventsForDay(year, month, day, weekday) {
         ev.repeat === "yearly" && ev.month === month && ev.day === day
     );
 
-    // If any yearly event blocks repeating events → ONLY show those
     if (yearly.some(ev => ev.block)) {
         return yearly;
     }
@@ -65,7 +63,7 @@ function getEventsForDay(year, month, day, weekday) {
     const weekly = events.filter(ev =>
         ev.repeat === "weekly" && ev.weekday === weekday
     );
-    
+
     return [...oneTime, ...yearly, ...monthly, ...weekly];
 }
 function createCalendar() {

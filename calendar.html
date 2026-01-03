@@ -1,27 +1,29 @@
 <!DOCTYPE html>
+
 <head>
-    <meta charset = "UTF-8">
-    <link rel = "stylesheet" href = "calendar.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="calendar.css">
     <link rel="icon" type="image/x-icon" href="resourceHubLogo.ico.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alice&family=Happy+Monkey&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>ComeUnity Calendar</title>
 </head>
+
 <body>
     <h1>ComeUnity Calendar</h1>
-    <h4 style="font-family: 'Open Sans', sans-serif;">(Please keep in mind that these are not real events or places)</h4>
+    <h4>(Please keep in mind that these are not real events or places)</h4>
     <!-- This is the calendar container-->
-    <div class = "calendar-container">
+    <div class="calendar-container">
         <!--This is the header of the calendar-->
-        <div class = "calendar-header">
-            <button id = "previous-month">◀</button>
-            <h2 id = "month-year"></h2>
-            <button id = "next-month">▶</button>
+        <div class="calendar-header">
+            <button id="previous-month">◀</button>
+            <h2 id="month-year"></h2>
+            <button id="next-month">▶</button>
         </div>
         <!--This is the days of the calendar-->
-        <div class = "calendar-days">
+        <div class="calendar-days">
             <div>Sunday</div>
             <div>Monday</div>
             <div>Tuesday</div>
@@ -31,18 +33,24 @@
             <div>Saturday</div>
         </div>
         <!--Calendar Grid-->
-        <div class = "calendar-grid" id="calendar-grid"></div>
+        <div class="calendar-grid" id="calendar-grid"></div>
     </div>
-    <script src = "calendar.js"></script>
+    <script src="calendar.js"></script>
     <div id="event-modal" class="modal">
         <div class="modal-content">
             <img id="modal-image" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
             <h2 id="modal-title"></h2>
-            <p><strong>Time: </strong><span id = "modal-time"></span></p>
-            <p><strong>Location: </strong><span id = "modal-location"></span></p>
+            <p><strong>Time: </strong><span id="modal-time"></span></p>
+            <p><strong>Location: </strong><span id="modal-location"></span></p>
             <p id="modal-details"></p>
             <span id="close-modal" class="close">&times;</span>
         </div>
     </div>
+    <footer class = "footer">
+        <p><strong>&copy; 2026 ComeUnity Space</strong></p>
+        <p>Contact: (123)-456-7890</p>
+        <p>Email: comeunityspace@gmail.com</p>
+    </footer>
 </body>
+
 </html>

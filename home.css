@@ -1,0 +1,294 @@
+body {
+    margin: 0;
+    font-family: "Alice", serif;
+    background: #efeded
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+}
+
+p,
+h4,
+h2 {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.hr {
+    border: none;
+    height: 4px;
+    background: #d0d0dd;
+    margin: 60px auto;
+    width: 90%;
+    border-radius: 10px;
+}
+
+/* Main Banner Section CSS*/
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: url("community-picture.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 80vh;
+    color: rgb(0, 0, 0);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    /* adjust darkness here */
+    z-index: 1;
+}
+
+.hero * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 5rem;
+}
+
+.hero-text {
+    animation: bounceUp 2s ease-out;
+    color: white;
+    font-weight: 300;
+}
+
+@keyframes bounceUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.overlay {
+    padding: 120px 20px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+}
+
+/* About Us Section CSS*/
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about-text {
+    flex: 2;
+    text-align: left;
+}
+
+.about-text h1 {
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.about-button {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-btn {
+    padding: 60px 40px;
+    background: #cae1ff;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+}
+
+.about-btn:hover {
+    background: #97b1d3;
+}
+
+
+/* Mission Section CSS*/
+.mission h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.mission-points {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.point {
+    background: #cae1ff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 2px solid white;
+}
+
+.point:hover {
+    transform: translateY(-8px);
+    transition: 0.5s ease;
+}
+
+/* Spotlight Section CSS */
+.spotlight h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Container that holds arrows + track */
+.spotlight-container {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    overflow: visible;
+}
+
+.spotlight-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+}
+
+.spotlight-track::-webkit-scrollbar {
+    display: none;
+}
+
+.spotlight-card {
+    min-width: 280px;
+    background: #cae1ff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    text-align: left;
+    transition: transform 0.3s ease;
+    border: 2px solid white;
+}
+
+.spotlight-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgb(255, 255, 0);
+}
+
+.left-btn,
+.right-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #cae1ff;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: 0.2s ease;
+    z-index: 10;
+    border: 2px solid white;
+}
+
+.left-btn:hover,
+.right-btn:hover {
+    background: #abbfda;
+}
+
+.left-btn {
+    left: -30px;
+}
+
+.right-btn {
+    right: -30px;
+}
+
+/* Statistics Section CSS*/
+.statistics {
+    text-align: center;
+}
+
+.statistics h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.statistics-box {
+    background: #cae1ff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.statistics-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000000;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background: #cae1ff;
+    text-align: left;
+    padding: 30px 70px;
+}
+
+.footer p {
+    text-align: left;
+}
