@@ -26,9 +26,11 @@
             <div class="about-text">
                 <h1>What is ComeUnity Space?</h1>
                 <p>
-                    ComeUnity Space was built to <strong>serve</strong> and <strong>support</strong> others by fostering a truly <strong>welcoming</strong> environment.
+                    ComeUnity Space was built to <strong>serve</strong> and <strong>support</strong> others by fostering
+                    a truly <strong>welcoming</strong> environment.
                     Moving into new places can be rough, but spaces like ComeUnity help neighbors <strong>learn,
-                    connect, and uplift one another.</strong> We believe that a community grown from passion and belonging
+                        connect, and uplift one another.</strong> We believe that a community grown from passion and
+                    belonging
                     creates room for <strong>everyone to blossom</strong> 🩵.
                 </p>
             </div>
@@ -51,8 +53,8 @@
     <hr class="hr">
     <section class="spotlight">
         <h1>Lets shine a spotlight on these wonderful services!</h1>
-        <div class = "directory-button">
-            <a href = "directory.html" class = "directory-btn">Visit our ComeUnity Directory!</a>
+        <div class="directory-button">
+            <a href="directory.html" class="directory-btn">Visit our ComeUnity Directory!</a>
         </div>
 
         <div class="spotlight-container">
@@ -121,7 +123,7 @@
         </div>
     </section>
     <hr class="hr">
-    <section class="statistics">
+    <section class="statistics" id="statistics-section">
         <h1>Our <strong>community impact</strong> has been great and growing...</h1>
         <h4>(This section is not factual)</h4>
         <div class="statistics-grid">
@@ -143,7 +145,7 @@
             </div>
         </div>
     </section>
-    <hr class = "hr">
+    <hr class="hr">
 
     <script>
         //Spotlight 
@@ -161,22 +163,36 @@
 
         //Statistics
         const counters = document.querySelectorAll('.statistics-number');
-        counters.forEach(counter => {
-            const updateCount = () => {
-                const target = +counter.getAttribute('data-target');
-                const current = +counter.innerText;
-                const increment = target / 70;
-                if (current < target) {
-                    counter.innerText = Math.ceil(current + increment);
-                    requestAnimationFrame(updateCount);
-                } else {
-                    counter.innerText = target;
-                }
-            };
-            updateCount();
-        });
+        let hasStarted = false; // prevents restarting every hover
+
+        function startCounting() {
+            if (hasStarted) return;
+            hasStarted = true;
+
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const current = +counter.innerText;
+                    const increment = target / 60;
+
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current + increment);
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                updateCount();
+            });
+        }
+
+        // Start when user hovers over the stats section
+        const statsSection = document.getElementById('statistics-section');
+        statsSection.addEventListener('mouseenter', startCounting);
+
     </script>
-    <footer class = "footer">
+    <footer class="footer">
         <p><strong>&copy; 2026 ComeUnity Space</strong></p>
         <p>Contact: (123)-456-7890</p>
         <p>Email: comeunityspace@gmail.com</p>
