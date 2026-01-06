@@ -1,0 +1,58 @@
+<html>
+
+    <title> Resources | ComeUnity Space </title>
+
+    <!-----------code for logo on tab----------->
+    <link rel="icon" type="image/x-icon" href="resourceHubLogo.ico.png">
+    <head>
+        <link rel="stylesheet" href="resources.css"></link>
+        <h1>Resource Directory</h1>
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+    </style>
+    <body>
+
+        <script src="communities_data.js"></script>
+        <!-----------category buttons----------->
+        <div class="btnGroup"> 
+            <button class=categoryButton style="vertical-align:middle" data-category="all"><span>All resources</span></button>
+            <button class=categoryButton style="vertical-align:middle" data-category="Food Assistance"><span>Food Assistance</span></button>
+            <button class=categoryButton style="vertical-align:middle" data-category="Housing & Community Development"><span>Housing & Community Development</span></button>
+            <button class=categoryButton style="vertical-align:middle" data-category="Religious Community Assistance"><span>Religious Community Assistance</span></button>
+            <button class=categoryButton style="vertical-align:middle" data-category="Animal Welfare"><span>Animal Welfare</span></button>
+            <button class=categoryButton style="vertical-align:middle" data-category="Environmental & Community Clean-Up"><span>Environmental & Community Clean-Up</span></button>
+            <button class=categoryButton style="vertical-align:middle" data-category="Youth Volunteer Programs"><span>Youth Volunteer Programs</span></button>
+            <button class=categoryButton style="vertical-align:middle" data-category="Non-Profit Organizations"><span>Non-Profit Organizations</span></button>
+            <button class=categoryButton style="vertical-align:middle" data-category="Mental Health Services"><span>Mental Health Services</span></button>
+            <button class=categoryButton style="vertical-align:middle" data-category="Emergency Services"><span>Emergency Services</span></button>
+            <button class=categoryButton style="vertical-align:middle" data-category="Education & Tutoring"><span>Education & Tutoring</span></button>
+        </div>
+
+        <!-----------dropdown filter + search----------->
+        <div class="search-filter-container">
+            <div class="dropdown">
+                <button class="dropBtn">Filter by</button>
+                <div class="dropdown-content">
+                    <a href="#" id="sortAlpha">Alphabetical (A-Z)</a>
+                    <a href="#" id="sortZtoA">Alphabetical (Z-A)</a>
+                    <a href="#" id="ratingHightoLow">Rating (High to Low)</a>
+                    <a href="#" id="ratingLowtoHigh">Rating (Low to High)</a>
+                </div>
+        </div>
+                <input id="searchInput" type="text" class="search-bar" placeholder="🔍Search resources...">
+        </div>
+        <div>
+
+            <!--to show no. of results found-->
+            <h2 id="resultsCount">  </h2>
+
+            <!--to show a disclaimer that the ratings are for demonstration only-->
+            <div id="ratingDisclaimer" class="disclaimer">
+                *Note: These ratings are for demonstration purposes and do not reflect actual service reviews.
+            </div>
+        </div>
+        <div id="communityList"></div> <!-- div for the cards to be inserted by js -->
+        <script src="filtering_resources.js"></script>
+    </body>
+</html>

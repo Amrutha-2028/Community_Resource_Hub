@@ -1,0 +1,242 @@
+
+/* -------------------general style------------------- */
+
+body{
+    background-color: #efeded;
+}
+
+h1{
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #004aad;
+    text-align: center;
+    font-size: 50px;
+    margin: 30px;
+}
+
+h2{
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #004aad;
+    margin: 9px;
+    font-size: 15px;
+}
+
+div{
+    justify-content: center;
+}
+
+/* -------------------category button style------------------- */
+
+.categoryButton{
+    background-color: #004aad;
+    color: #efeded;
+    padding: 15px 32px;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 2px;
+}
+
+.categoryButton:hover{
+    background-color: #efeded;
+    color: #004aad;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
+
+.btnGroup{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* for arrow on hover */
+.categoryButton span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.categoryButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.categoryButton:hover span {
+  padding-right: 25px;
+}
+
+.categoryButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* -------------------filter dropdown style------------------- */
+
+.dropBtn{
+    background-color: #004aad;
+    color: #efeded;
+    padding: 12px 25px;
+    height: 48px;
+    font-size: 17px;
+    cursor: pointer;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown{
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color:#efeded;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color:#004aad;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+.dropdown-content a:hover {
+  background-color: #004aad;
+  color: #efeded;
+}
+
+/*only show menu if the button is hovered OR the menu itself is hovered*/
+.dropBtn:hover + .dropdown-content, 
+.dropdown-content:hover {
+  display: block;
+}
+
+.dropBtn:hover {
+  background-color: #efeded;
+  color: #004aad;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
+
+/* -------------------resource card style------------------- */
+
+#communityList {
+    display: grid;
+    /* ↓ this calculates how many 300px cards fit in any screen size */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.community-card {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.community-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+}
+
+.community-card h3 {
+    margin-top: 0;
+    color: #004aad;
+    font-size: 1.25rem;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.community-card p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.4;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.community-card b {
+    color: #004aad;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.community-card a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.community-card a:hover{
+    text-decoration: underline;
+}
+
+/* -------------------rating disclaimer style------------------- */
+
+.disclaimer{
+    display: none;
+    color: #ec6f6f;
+    margin-bottom: 15px;
+    font-style: italic;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+/* -------------------search bar style------------------- */
+
+.search-filter-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    gap: 20px;               
+    margin: 40px auto;       
+    max-width: 900px;
+}
+
+.search-bar {
+    width: 350px;
+    padding: 12px 20px;
+    border: 2px solid #004aad;
+    border-radius: 25px;
+    font-family: "Alice", serif;
+    font-size: 16px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-bar:focus {
+    box-shadow: 0 0 10px rgba(0, 74, 173, 0.2);
+}
+
