@@ -1,6 +1,6 @@
  body{
   background: white;
-  font-family: Rubik, sans-serif;
+  font-family: "Inter", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -17,7 +17,7 @@ h1{
 .menu {
   box-sizing: border-box;
   text-align: center;
-  background: rgb(0, 187, 255);
+  background: #d0d0dd;
   position: absolute;
   height: 100%;
   width: 250px;
