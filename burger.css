@@ -19,7 +19,7 @@ h1{
   box-sizing: border-box;
   text-align: center;
   background: #d0d0dd;
-  position: fixed;
+  position: absolute;
   height: 100vh;
   width: 250px;
   justify-content: flex-end;
