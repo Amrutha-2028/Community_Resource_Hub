@@ -69,7 +69,7 @@ visibility: hidden;
 }
 
 .burger {
-  position: absolute;
+  position: fixed;
   height: 30px;
   width: 30px;
   z-index: 2;
