@@ -79,7 +79,7 @@ visibility: hidden;
 }
 
 .burger .b {
-  position: absolute;
+  position: fixed;
   height: 5px;
   width: 24px;
   background-color: black;
