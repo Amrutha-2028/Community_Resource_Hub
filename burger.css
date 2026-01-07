@@ -18,8 +18,10 @@ h1{
 .menu {
   box-sizing: border-box;
   text-align: center;
+  top: 0;
+  left: 0;
   background: #d0d0dd;
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width: 250px;
   justify-content: flex-end;
