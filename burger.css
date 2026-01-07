@@ -20,7 +20,7 @@ h1{
   text-align: center;
   background: #d0d0dd;
   position: absolute;
-  height: 100%;
+  height: 100vh;
   width: 250px;
   justify-content: flex-end;
   transition: transform 0.5s ease;
