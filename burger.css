@@ -29,6 +29,12 @@ h1{
   transition: transform 0.5s ease;
   transform: translateX(-250px)
 }
+label[for="menu-toggle"] {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 10000;
+}
 
 .item {
   width: fit-content;
