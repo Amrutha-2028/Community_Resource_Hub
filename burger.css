@@ -11,29 +11,19 @@ h1{
   padding-right: 10px;
   pointer-events: none;
   color: black;
-  margin-top: 0px
 
 }
 
 .menu {
   box-sizing: border-box;
   text-align: center;
-  top: 0;
-  left: 0;
   background: #d0d0dd;
-  z: 1000;
-  position: fixed !important;
+  position: absolute;
   height: 100vh;
   width: 250px;
   justify-content: flex-end;
   transition: transform 0.5s ease;
   transform: translateX(-250px)
-}
-label[for="menu-toggle"] {
-  position: fixed !important;
-  top: 15px;
-  left: 15px;
-  z-index: 10000;
 }
 
 .item {
@@ -76,17 +66,17 @@ visibility: hidden;
 }
 
 .burger {
-  position: relative;
+  position: absolute;
   height: 30px;
   width: 30px;
   z-index: 2;
   cursor: pointer;
-  margin-top: 0px;
+  margin-top: 25px;
   transition: opacity 0.3s;
 }
 
 .burger .b {
-  position: fixed;
+  position: absolute;
   height: 5px;
   width: 24px;
   background-color: black;
