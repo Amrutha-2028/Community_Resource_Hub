@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="footer.css"></link>
     <style>
         @import url("aboutus.css")
     </style>
@@ -91,12 +92,19 @@
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <p>&copy; <span id="year"></span> Come Unity</p>
-    <script>
-      2026
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </footer>
+  <footer>
+        <div class="footer-column vision-col">
+            <h3>Our Vision</h3>
+            <p>At ComeUnity Space, everyone belongs by sharing support, offering help, and finding help together in one place.</p>
+        </div>
+        <div class="footer-column">
+            <p>© 2026 ComeUnity Space</p>
+        </div>
+        <div class="footer-column contact-col">
+            <p>Contact Us</p>
+            <p>Phone: (123)-456-7890</p>
+            <p>Email: help@comeunityspace.com</p>
+        </div>
+     </footer>
 </body>
 </html>
