@@ -4,14 +4,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  top: 0;
  
 }
 .nav-title{
   margin-left: 0px;
-  margin-top: 35px;
+  margin-top: 36px;
   padding-right: 10px;
+  font-size: 40px;
+  font-weight: bold;
   pointer-events: none;
-  color: rgba(0, 0, 0, 0.955);
+  color: black;
 
 }
 
@@ -20,15 +23,17 @@
   text-align: center;
   background: #cae1ff;
   position: absolute;
+  top: 0;
+  left: 0;
   height: 600px;
   border-radius: 0px 0px 20px 0px;
   border-right: solid  3px black;
   border-bottom: solid  3px black;
   width: 250px;
-  z-index: 1000;
+  z-index: 1014;
   justify-content: flex-end;
   transition: transform 0.5s ease;
-  transform: translateX(-250px)
+  transform: translateX(-260px)
 }
 
 
@@ -73,9 +78,10 @@ visibility: hidden;
 
 .burger {
   position: absolute;
+  top: 0;
   height: 40px;
   width: 40px;
-  z-index: 1001;
+  z-index: 1015;
   cursor: pointer;
   margin-top: 10px;
   transition: opacity 0.3s;
