@@ -1,0 +1,154 @@
+/* aboutus.css
+    Stylesheet for the "About Us Page" of the Come Unity Website
+*/
+
+/* ---------------------------
+   Variables
+   --------------------------- */
+:root {
+  --soft-cream: #f5efd6;
+  --primary-blue: #0B3D91;
+  --accent-purple: #7B3FBF;
+  --light-blue: #5090e9;
+
+  .text-primary { color: var(--primary-blue); }
+.text-accent  { color: var(--accent-purple); }
+.bg-primary   { background: var(--light-blue); color: #5090e9; }
+.bg-soft      { background: var(--primary-blue); }
+  --container-max-width: 900px;
+  --content-max-width: 650px;
+  --border-size: 4px;
+  --gap-vertical: 2.5rem;
+}
+
+/* ---------------------------
+   Reset / sensible defaults
+   --------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------------------
+   Base body styles
+   --------------------------- */
+body {
+  background-color: var(--soft-cream);
+  color: var(--primary-blue);
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.5;
+}
+
+/* ---------------------------
+   Container
+   --------------------------- */
+.about-container {
+  border: var(--border-size) solid var(--accent-purple);
+  padding: 3rem 2rem;
+  max-width: var(--container-max-width);
+  margin: 2rem auto;
+  background-color: var(--soft-cream);
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* ---------------------------
+   Header section
+   --------------------------- */
+.about-header {
+  background-color: var(--light-blue);
+  padding: 2.5rem 1rem;
+  /* keeps the decorative rounded-bottom shape from original, but more stable across browsers */
+  border-bottom-left-radius: 60% 15%;
+  border-bottom-right-radius: 60% 15%;
+}
+
+/* Title */
+.about-header h1 {
+  margin: 0;
+  /* responsive sizing */
+  font-size: clamp(1.75rem, 3.5vw + 1rem, 3rem);
+  font-weight: 600;
+  color: var(--primary-blue);
+  line-height: 1.05;
+}
+
+/* ---------------------------
+   Body text
+   --------------------------- */
+.about-content {
+  max-width: var(--content-max-width);
+  margin: var(--gap-vertical) auto 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--primary-blue);
+  text-align: left; /* improves readability on wide screens */
+  padding: 0 1rem;
+}
+
+/* ---------------------------
+   Accessibility: focus states
+   --------------------------- */
+.about-container a,
+.about-container button {
+  outline: none;
+}
+
+.about-container a:focus,
+.about-container button:focus {
+  box-shadow: 0 0 0 4px rgba(123, 63, 191, 0.18); /* subtle purple focus ring */
+  border-radius: 4px;
+}
+
+/* ---------------------------
+   Responsive tweaks
+   --------------------------- */
+@media (max-width: 600px) {
+  .about-container {
+    padding: 2rem 1rem;
+    margin: 1rem;
+  }
+
+  .about-header {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .about-content {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+
+/* ---------------------------
+   Optional dark-mode adjustments
+   --------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --soft-cream: #0B1220;
+    --primary-blue: #D6E6FF;
+    --light-blue: #0F2340;
+    --accent-purple: #9A6BFF;
+  }
+
+  body {
+    background-color: var(--soft-cream);
+    color: var(--primary-blue);
+  }
+
+  .about-container {
+    background-color: rgba(255,255,255,0.03);
+    border-color: rgba(154,107,255,0.6);
+  }
+
+  .about-header {
+    background-color: var(--light-blue);
+  }
+}
