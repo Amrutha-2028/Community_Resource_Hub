@@ -1,4 +1,4 @@
- body{
+ .burger-menu{
   background: white;
   font-family: "Alice", serif;
   box-sizing: border-box;
@@ -6,11 +6,12 @@
   padding: 0;
  
 }
-h1{
+.nav-title{
   margin-left: 0px;
+  margin-top: 35px;
   padding-right: 10px;
   pointer-events: none;
-  color: rgb(0, 0, 0);
+  color: rgba(0, 0, 0, 0.955);
 
 }
 
@@ -19,7 +20,10 @@ h1{
   text-align: center;
   background: #cae1ff;
   position: absolute;
-  height: 820px;
+  height: 600px;
+  border-radius: 0px 0px 20px 0px;
+  border-right: solid  3px black;
+  border-bottom: solid  3px black;
   width: 250px;
   z-index: 1000;
   justify-content: flex-end;
@@ -127,3 +131,4 @@ visibility: hidden;
 }
 .button:checked ~ .menu {
   transform: translateX(0)
+}
