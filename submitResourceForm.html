@@ -1,0 +1,57 @@
+<html>
+    <!-----------code for logo on tab----------->
+    <link rel="icon" type="image/x-icon" href="resourceHubLogo.ico.png">
+    <head>
+        <title> Resource Request Form | ComeUnity Space </title>
+        <link rel="stylesheet" href="submitResourceForm.css"></link> 
+        <meta charset="UTF-8"> <!--accepts any type of text-->
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+    </style>
+    <body>
+        <h1>Add to Our Directory!</h1>
+        <h3>Help us grow! If there’s a resource you’d like to see here, let us know by filling out this form.</h3>
+        <div>
+        <form action="submittedResourcePage.html">
+            <label for="community_name">Name of the community: </label>
+            <input type="text" id="community_name" placeholder="Community name...">
+            <label for="website">Website: </label>
+            <input type="text" id="website" placeholder="The community's website URL...">
+            <label for="category">Category:</label>
+            <select id="category" name="category">
+                <option value="" disabled selected>Select a category...</option>
+                <option value="education">Food Assistance</option>
+                <option value="health">Housing & Community Development</option>
+                <option value="housing">Religious Commuity Assistance</option>
+                <option value="food">Animal Welfare</option>
+                <option value="other">Environmental & Community Clean-Up</option>
+                <option value="other">Youth Volunteer Programs</option>
+                <option value="other">Non-Profit & Volunteer Support</option>
+                <option value="other">Mental Health Services</option>
+                <option value="other">Emergency Services</option>
+                <option value="other">Education & Tutoring</option>
+            </select>
+            <label for="description">Description of the Community </label>
+            <input type="text" id="description" placeholder="About the community...">
+            <label for="address">Address </label>
+            <input type="text" id="address" placeholder="Address of the community...">
+            <label for="email">Email </label>
+            <input type="text" id="email" placeholder="Email of the community...">
+            <label for="phone">Phone </label>
+            <input type="text" id="phone" placeholder="Phone number of the community...">
+            <label for="reason">Why should this community be added? </label>
+            <input type="text" id="reason" placeholder="Advantages of including this community in our directory...">
+            <label class="container">I confirm this information is accurate.
+            <input type="checkbox" name="confirm">
+            <span class="checkmark"></span></label>
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+
+    </body>
+
+
+
+
+ </html>

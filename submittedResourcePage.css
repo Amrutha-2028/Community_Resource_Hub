@@ -1,0 +1,54 @@
+/* -------------------general style------------------- */
+
+body{
+    background-color: #efeded;
+}
+
+h1{
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #004aad;
+    text-align: center;
+    font-size: 50px;
+    margin: 30px;
+}
+
+h2, h3{
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #004aad;
+    text-align: center;
+    margin: 9px;
+    font-size: 15px;
+}
+
+div{
+    justify-content: center;
+}
+
+/* -------------------button style------------------- */
+button{
+    display: block;
+    width: 10%;
+    background-color: #004aad;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: background 0.3s ease;
+    margin: 20px auto;
+    text-align: center;
+}
+
+button:hover{
+    background-color: #ffffff;
+    color: #004aad;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}

@@ -1,0 +1,197 @@
+/* -------------------general style------------------- */
+
+body{
+    background-color: #efeded;
+}
+
+h1{
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #004aad;
+    text-align: center;
+    font-size: 50px;
+    margin: 30px;
+}
+
+h2, h3{
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #004aad;
+    text-align: center;
+    margin: 9px;
+    font-size: 15px;
+}
+
+div{
+    justify-content: center;
+}
+
+
+/* ------------------- form style ------------------- */
+
+form {
+    background-color: #ffffff; 
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 1000px; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #004aad;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    box-sizing: border-box;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: border-color 0.3s ease; /* hover effect */
+}
+
+input[type=text]:focus {
+    outline: none;
+    border-color: #004aad;
+}
+
+input[type=submit] {
+    display: flex;
+    width: 40%;
+    background-color: #004aad;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: background 0.3s ease;
+    margin: 20px auto;
+}
+
+input[type=submit]:hover {
+    background-color: #ffffff;
+    color: #004aad;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
+
+/* ------------------- category dropdown style ------------------- */
+
+select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    font-family: "Alice", serif;
+    font-size: 15px;
+    color: #333;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* border color transition */
+}
+
+select:focus {
+    outline: none;
+    border-color: #004aad;
+    box-shadow: 0 0 5px rgba(0, 74, 173, 0.2);
+}
+
+select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* ------------------- checkbox style ------------------- */
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #004aad; 
+    font-family: "Alice", serif;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    background-color: #fff;
+    border: 2px solid #ccc; /* Matches input box borders */
+    border-radius: 4px;    /* Slightly rounded corners for a modern look */
+    transition: all 0.2s ease;
+}
+
+.container:hover input ~ .checkmark {
+    border-color: #2c5fb3;
+    background-color: #f8f9fa;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #004aad;
+    border-color: #004aad;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
