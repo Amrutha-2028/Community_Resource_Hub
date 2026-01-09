@@ -1,0 +1,31 @@
+/*-------------------footer-------------------*/
+footer {
+    background: #cae1ff; 
+    padding: 50px 70px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: flex-start;        
+}
+
+.footer-column {
+    flex: 1;       
+    max-width: 30%;
+    color: #004aad;
+    font-family: "Alice", serif;
+}
+
+.vision-col h3 {
+    margin-top: 0;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.vision-col p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.contact-col {
+    text-align: right;
+}
