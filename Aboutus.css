@@ -12,7 +12,7 @@
   --border-size: 4px;
   --gap-vertical: 2.5rem;
 }
-  /* Utility Classes */ 
+  /* ultility stuff */ 
 .text-primary { color: var(--primary-blue); }
 .text-accent  { color: var(--accent-purple); }
 
@@ -25,7 +25,7 @@
     color: var(--light-blue);
 }
 
-/* Normal Reset */
+/* reset stuff */
 *,
 *::before,
 *::after {
@@ -39,7 +39,7 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Basic Body styles */
+/* styles for the body */
 body {
   background-color: var(--soft-cream);
   color: var(--primary-blue);
@@ -49,7 +49,7 @@ body {
   min-height:100vh; /* makes sure the full viewport is seen */
 }
 
-/* Container */
+/* stuuf for container */
 .about-container {
   border: var(--border-size) solid var(--accent-purple);
   padding: 3rem 2rem;
@@ -60,7 +60,7 @@ body {
   border-radius: 8px;
 }
 
-/* Header */
+/* header stuff */
 .about-header {
   background-color: var(--light-blue);
   padding: 2.5rem 1rem;
@@ -68,7 +68,7 @@ body {
   border-bottom-right-radius: 60% 15%;
 }
 
-/* Main Title */
+/* title stuff "main" */
 .about-header h1 {
   margin: 0;
   font-size: clamp(1.8rem, 4vw, 3rem);
@@ -77,25 +77,25 @@ body {
   line-height: 1.1;
 }
 
-/* Body content */
+/* Body stuff */
 .about-content {
   max-width: var(--content-max-width);
   margin: var(--gap-vertical) auto 0;
   font-size: 1.05rem;
   line-height: 1.7;
   color: var(--primary-blue);
-  text-align: left; /* Makes it more clear to read */
+  text-align: left; /* Makes  it more clear to read */
   padding: 0 1rem;
 }
 
-/* Focus on links and buttons */
+/*  links and  button stuff */
 .about-container a:focus,
 .about-container button:focus {
   box-shadow: 0 0 0 4px rgba(123, 63, 191, 0.18);
   border-radius: 4px;
 }
 
-/* Tweaks for responsiveness */
+/*  fixes  for responsiveness */
 @media (max-width: 600px) {
   .about-container {
     padding: 2rem 1rem;
@@ -112,7 +112,7 @@ body {
   }
 }
 
-/* Optional Dark Mode */
+/* dark mode if wanted  */
 @media (prefers-color-scheme: dark) {
   :root {
     --soft-cream: #0B1220;
