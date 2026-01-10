@@ -1,29 +1,31 @@
-/* aboutus.css
-    Stylesheet for the "About Us Page" of the Come Unity Website
-*/
+/* aboutus.css - styles for the website's About Us */
 
-/* ---------------------------
-   Variables
-   --------------------------- */
+/* Variables */ 
 :root {
   --soft-cream: #f5efd6;
   --primary-blue: #0B3D91;
   --accent-purple: #7B3FBF;
   --light-blue: #5090e9;
-
-  .text-primary { color: var(--primary-blue); }
-.text-accent  { color: var(--accent-purple); }
-.bg-primary   { background: var(--light-blue); color: #5090e9; }
-.bg-soft      { background: var(--primary-blue); }
+    
   --container-max-width: 900px;
   --content-max-width: 650px;
   --border-size: 4px;
   --gap-vertical: 2.5rem;
 }
+  /* Utility Classes */ 
+.text-primary { color: var(--primary-blue); }
+.text-accent  { color: var(--accent-purple); }
 
-/* ---------------------------
-   Reset / sensible defaults
-   --------------------------- */
+.bg-primary   { 
+    background: var(--light-blue); 
+    color: var(--primary-blue); 
+}
+.bg-soft  { 
+    background: var(--primary-blue); 
+    color: var(--light-blue);
+}
+
+/* Normal Reset */
 *,
 *::before,
 *::after {
@@ -37,19 +39,17 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ---------------------------
-   Base body styles
-   --------------------------- */
+/* Basic Body styles */
 body {
   background-color: var(--soft-cream);
   color: var(--primary-blue);
   font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
   line-height: 1.5;
+
+  min-height:100vh; /* makes sure the full viewport is seen */
 }
 
-/* ---------------------------
-   Container
-   --------------------------- */
+/* Container */
 .about-container {
   border: var(--border-size) solid var(--accent-purple);
   padding: 3rem 2rem;
@@ -60,57 +60,42 @@ body {
   border-radius: 8px;
 }
 
-/* ---------------------------
-   Header section
-   --------------------------- */
+/* Header */
 .about-header {
   background-color: var(--light-blue);
   padding: 2.5rem 1rem;
-  /* keeps the decorative rounded-bottom shape from original, but more stable across browsers */
   border-bottom-left-radius: 60% 15%;
   border-bottom-right-radius: 60% 15%;
 }
 
-/* Title */
+/* Main Title */
 .about-header h1 {
   margin: 0;
-  /* responsive sizing */
-  font-size: clamp(1.75rem, 3.5vw + 1rem, 3rem);
+  font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 600;
   color: var(--primary-blue);
-  line-height: 1.05;
+  line-height: 1.1;
 }
 
-/* ---------------------------
-   Body text
-   --------------------------- */
+/* Body content */
 .about-content {
   max-width: var(--content-max-width);
   margin: var(--gap-vertical) auto 0;
   font-size: 1.05rem;
   line-height: 1.7;
   color: var(--primary-blue);
-  text-align: left; /* improves readability on wide screens */
+  text-align: left; /* Makes it more clear to read */
   padding: 0 1rem;
 }
 
-/* ---------------------------
-   Accessibility: focus states
-   --------------------------- */
-.about-container a,
-.about-container button {
-  outline: none;
-}
-
+/* Focus on links and buttons */
 .about-container a:focus,
 .about-container button:focus {
-  box-shadow: 0 0 0 4px rgba(123, 63, 191, 0.18); /* subtle purple focus ring */
+  box-shadow: 0 0 0 4px rgba(123, 63, 191, 0.18);
   border-radius: 4px;
 }
 
-/* ---------------------------
-   Responsive tweaks
-   --------------------------- */
+/* Tweaks for responsiveness */
 @media (max-width: 600px) {
   .about-container {
     padding: 2rem 1rem;
@@ -127,9 +112,7 @@ body {
   }
 }
 
-/* ---------------------------
-   Optional dark-mode adjustments
-   --------------------------- */
+/* Optional Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --soft-cream: #0B1220;
